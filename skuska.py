@@ -503,6 +503,8 @@ low_img = image.subsample(2, 2)
 
 categories = tuple(txt_files('Cennik.txt', 'TOVAR.txt'))
 root.bind('<Escape>', lambda event: end_of_program())
+root.protocol("WM_DELETE_WINDOW", end_of_program)
+
 if __name__ == '__main__':
     page = Mainpage()
     bar = Bar(active=False)
